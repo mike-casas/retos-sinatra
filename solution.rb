@@ -1,8 +1,9 @@
 require "sinatra"
 
-get '/makers/:nombre' do 
-		<<-HTML
-			<h1>Hola #{params[:nombre].capitalize}!.</h1>
-		HTML
-
+get '/' do 
+	erb:form
 end
+
+post '/saludar' do
+	"¡Hola! #{params[:nombre]}"
+end 
