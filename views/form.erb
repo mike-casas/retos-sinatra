@@ -1,10 +1,5 @@
-<style>
- input[type=text]{
-  border: 1px solid blue;
- }
-</style>
-<h1>Hola dime a quien Saludar</h1>
-<form action="/saludar" method="POST">
-	<input type="text" name="nombre" required/>
-	<input type="submit" value="saludar">
+
+<h1>Mi cuenta es: <%= @valor.to_i %></h1>
+<form action="/" method="GET">
+	<input type="submit" value="sumar">
 </form>
