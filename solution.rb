@@ -1,13 +1,17 @@
 require "sinatra"
 
-use Rack::Session::Pool, :expire_after => 2592000
+use Rack::Session::Pool
 
-get '/' do
-
+get '/:valor?' do
+  if params[:valor]
+    @sum=params[:valor]
+  else
+    @sum = session[:valor]
+  end
   erb:form
 end
 
 post '/' do
-  @valor=session[:valor] = (session[:valor].to_i + 1).to_s
-  redirect  '/'
+  session[:valor] = (session[:valor].to_i + 1).to_s
+  redirect "/#{session[:valor]}"
 end
