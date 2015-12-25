@@ -1,9 +1,7 @@
 require "sinatra"
 
 get '/' do 
-	erb:form
+	<<-HTML
+		<h1>HcUy6Re2LLBRtj</h1>
+	HTML
 end
-
-post '/saludar' do
-	"¡Hola! #{params[:nombre]}"
-end 
