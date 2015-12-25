@@ -1,5 +1,6 @@
-
-<h1>Mi cuenta es: <%= @valor.to_i %></h1>
-<form action="/" method="GET">
-	<input type="submit" value="sumar">
+<h1>Abuela Sorda</h1>
+<p>Di algo abuela</p>
+<form action="/response" method="POST">
+	<input type="text" name="data" />
+	<input type="submit" value="Dilo!"/>
 </form>
