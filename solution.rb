@@ -1,7 +1,13 @@
 require "sinatra"
 
 get '/' do 
-	<<-HTML
-		<h1>HcUy6Re2LLBRtj</h1>
-	HTML
+	code= "<h1>Hola</h1>
+		   <% (1..50).each do |x| %>
+		   	<% if x.even? %>
+				<p> <%= x %> Soy Par </p>
+			<% else %>
+				<p> <%= x %> Soy Impar </p>
+			<%end%>
+		   <%end%>" 
+	erb code
 end
